@@ -1,0 +1,110 @@
+[
+    {
+        "rank" : 1,
+        "userName" : "ndthanh",
+        "avatar" :"1.jpg",
+        "name" : "Thanh Nguyen",
+        "issueFound" : 124,
+        "badge" : "Dieu Hau",
+        "nextLevel" : 16
+    },
+    {
+        "rank" : 2,
+        "userName" : "dtoanh",
+        "avatar" :"1.jpg",
+        "name" : "Oanh Duong",
+        "issueFound" : 109,
+        "badge" : "Da Dieu",
+        "nextLevel" : 11
+    },
+    {
+        "rank" : 3,
+        "userName" : "dlgiang",
+        "name" : "Giang Dao",
+        "avatar" :"1.jpg",
+        "issueFound" : 89,
+        "badge" : "Ga Trong",
+        "nextLevel" : 11
+    },
+    {
+        "rank" : 4,
+        "userName" : "tqdkhoa",
+        "avatar" :"1.jpg",
+        "name" : "Khoa Tran",
+        "issueFound" : 83,
+        "badge" : "Ga Mai Me",
+        "nextLevel" : 8
+    },
+    {
+        "rank" : 5,
+        "userName" : "hvnis",
+        "avatar" :"1.jpg",
+        "name" : "Nis Hua",
+        "issueFound" : 79,
+        "badge" : "Ga Mai Me",
+        "nextLevel" : 5
+    },
+    {
+        "rank" : 6,
+        "userName" : "ddlanh",
+        "avatar" :"1.jpg",
+        "name" : "Lanh Dang",
+        "issueFound" : 77,
+        "badge" : "Ga Mai Me",
+        "nextLevel" : 2
+    },
+    {
+        "rank" : 7,
+        "userName" : "vmthuong",
+        "avatar" :"1.jpg",
+        "name" : "Thuong Vo",
+        "issueFound" : 55,
+        "badge" : "Chim Ri",
+        "nextLevel" : 11
+    },
+    {
+        "rank" : 8,
+        "userName" : "bttha",
+        "avatar" :"1.jpg",
+        "name" : "Ha Bui",
+        "issueFound" : 50,
+        "badge" : "Ga Con",
+        "nextLevel" : 10
+    },
+    {
+        "rank" : 9,
+        "userName" : "vtanh",
+        "name" : "Anh Vu",
+        "avatar" :"1.jpg",
+        "issueFound" : 49,
+        "badge" : "Ga Con",
+        "nextLevel" : 8
+    },
+    {
+        "rank" : 10,
+        "userName" : "nmly",
+        "avatar" :"1.jpg",
+        "name" : "Ly Nguyen",
+        "issueFound" : 40,
+        "badge" : "Ga BD",
+        "nextLevel" : 2
+    },
+    {
+        "rank" : 11,
+        "userName" : "pttrung",
+        "avatar" :"1.jpg",
+        "name" : "Trung Pham",
+        "issueFound" : 32,
+        "badge" : "Ga Gay",
+        "nextLevel" : 2
+    },
+    {
+        "rank" : 12,
+        "userName" : "tnson",
+        "avatar" :"1.jpg",
+        "name" : "Son Tran",
+        "issueFound" : 31,
+        "badge" : "Ga To",
+        "nextLevel" : 1
+    }
+]

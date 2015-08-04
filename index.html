@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="QIPPage" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LAFELIX HOTEL</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+
+    <!--datepicker-->
+    <link href="libs/datepicker/datepicker.min.css" rel="stylesheet">
+    <link href="libs/datepicker/datepicker3.min.css" rel="stylesheet">
+
+    <!--animate.css-->
+    <link href="css/animate.css" rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index" ng-controller="QIPCtrl">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" id="logo" href="#page-top"><img src="img/logos/Logo.png" height="30"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#accommodation">Accommodation</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#menus">Menus</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#promotion">Promotion</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#galleries">Galleries</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Full Page Image Background Carousel Header -->
+    <div class="slide-wrapper">
+    <header id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
+            </li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+
+            <!-- First slide -->
+            <div class="item active">
+                <div class="fill" style="background-image:url('img/galleries/Deluxe-Double-City-View.jpg');"></div>
+
+            </div><!-- /.item -->
+
+            <!-- Second slide -->
+            <div class="item">
+                <div class="fill" style="background-image:url('img/galleries/Reception.jpg');"></div>
+
+            </div><!-- /.item -->
+
+            <!-- Third slide -->
+            <div class="item">
+                <div class="fill" style="background-image:url('img/galleries/Restaurant-at-Night.jpg');"></div>
+
+            </div><!-- /.item -->
+
+        </div><!-- /.carousel-inner -->
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic"
+           role="button" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic"
+           role="button" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+        <div class="red">
+
+            <div class="red-content">
+                <div class="container">
+                    <div class="row reserve-form">
+                        <div class="col-sm-12 col-md-3">
+                            <div class="panel panel-default reserve-form-panel">
+                                <div class="panel-heading reserve-form-heading">
+                                    <h3 class="panel-title">RESERVE FORM</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <form id="reverseForm" method="post" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-xs-3 control-label">FROM: </label>
+                                            <div class="col-xs-8 date">
+                                                <div class="input-group input-append date" id="datePickerFrom">
+                                                    <input type="text" class="form-control" name="date" />
+                                                    <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-xs-3 control-label">TO:</label>
+                                            <div class="col-xs-8 date">
+                                                <div class="input-group input-append date" id="datePickerTo">
+                                                    <input type="text" class="form-control" name="date" />
+                                                    <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-xs-3 control-label">RES:</label>
+                                            <div class="col-xs-8 date">
+                                                <select class="form-control" id="reserve">
+                                                    <option>Stand</option>
+                                                    <option>VIP</option>
+                                                    <option>Olax</option>
+                                                    <option>Minya</option>
+                                                    <option>Kolla</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-xs-6 col-xs-offset-3">
+                                                <button type="submit" class="btn btn-default " data-toggle="modal" data-target="#myModal">
+                                                    RESERVE
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <section id="number-of-hotel" class="bg-darkest">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-12 wow zoomInLeft number-item" data-wow-duration="1s" data-wow-delay="0s">
+                    <span class="big-number-span">51</span>
+                    </br>
+                    <span class="text-color">WE HAVE 51 COZY ROOMS</span>
+                </div>
+                <div class="col-md-3 col-sm-12 wow fadeInUp number-item" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <span class="big-number-span">24</span>
+                    </br>
+                    <span class="text-color">WE OFFER 24H ROOM SERVICE</span>
+                </div>
+                <div class="col-md-3 col-sm-12 wow fadeInDown number-item" data-wow-duration="1s" data-wow-delay="1s">
+                    <span class="big-number-span">12</span>
+                    </br>
+                    <span class="text-color">WE CLOSE +12 ATTRACTIONS</span>
+                </div>
+                <div class="col-md-3 col-sm-12 wow zoomInRight number-item" data-wow-duration="1s" data-wow-delay="1.5s">
+                    <span class="big-number-span">35</span>
+                    </br>
+                    <span class="text-color">ONLY FROM 35 USD/NIGHT</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lafelix-hotel" class="bg-midlight-gray">
+        <div class="container">
+            <div class="row clear-bottom-30">
+                <div class="col-lg-12 text-center header-section-border-container">
+                    <span class="header-section-border">lafelix hotel</span>
+                </div>
+            </div>
+            <div class="row wow zoomIn" data-wow-duration="1s" data-wow-delay="0s">
+                <div class="col-sm-12 col-md-4 col-md-push-8">
+                    <img src="img/galleries/Ho-Chi-Minh-City-Hall.jpg" class="img-responsive" alt="Responsive image">
+                </div>
+                <div class="col-sm-12 col-md-8 col-md-pull-4 text-justify">
+                    <p>
+                        La Felix Hotel is a 3-star hotel located at Pham Ngu Lao street, District 1. It has 51 elegant rooms with most rooms have the nice view. All rooms are fully equipped with modern facilities, double-glazed windows and luxurious bathrooms.
+                    </p>
+                    <p>
+                        From our hotel rooms, you can have an amazing view to the 23-9 park nearby; feeling the fully green nature and peaceful atmosphere every morning.
+                    </p>
+                    <p>
+                        Our hotel is extremely close to Ben Thanh Market, just 5 minutes of walking so it’s very convenient for your travel purpose. It’s also surrounded by many travel companies, restaurants, banks, cars & motorbikes rental services as well as exciting attractions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="standard-room" class="bg-darkest">
+        <div class="container">
+            <div class="row clear-bottom-30">
+                <div class="col-lg-12 text-center header-section-border-container">
+                    <span class="header-section-border">Standard room</span>
+                </div>
+            </div>
+            <div class="row wow zoomInRight" data-wow-duration="1s" data-wow-delay="0s">
+                <div class="col-sm-12 col-md-8">
+                    <div id="standard-carousel" class="carousel slide" data-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#standard-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#standard-carousel" data-slide-to="1"></li>
+                            <li data-target="#standard-carousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner room-height">
+                            <div class="item active">
+                                <img src="img/galleries/Deluxe-Twin-City-View.jpg" alt="...">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="img/galleries/Buffet-Breakfast.jpg" alt="...">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="img/galleries/Reunification-Palace.jpg" alt="...">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+                        <a class="carousel-control left" href="#standard-carousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="carousel-control right" href="#standard-carousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 text-justify">
+                    Safe</br>
+                    Air conditioning</br>
+                    Desk, Sitting area,</br>
+                    Fan, Tile/Marble & Wooden floor</br>
+                    Hairdryer</br>
+                    Free toiletries, Toilet, Bathroom, Slippers, Bathtub or shower</br>
+                    TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Electric kettle</br>
+                    Wake-up service</br>
+                    Free WiFi is available in all rooms.</br>
+                    Room Size: 20 m²</br>
+                    Bed Size(s): 2 twin or 1 queen</br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="deluxe-room" class="bg-midlight-gray">
+        <div class="container">
+            <div class="row clear-bottom-30">
+                <div class="col-lg-12 text-center header-section-border-container">
+                    <span class="header-section-border">DELUXE ROOM</span>
+                </div>
+            </div>
+            <div class="row wow zoomInLeft" data-wow-duration="1s" data-wow-delay="0s">
+                <div class="col-sm-12 col-md-8 col-md-push-4">
+                    <div id="deluxe-carousel" class="carousel slide" data-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#deluxe-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#deluxe-carousel" data-slide-to="1"></li>
+                            <li data-target="#deluxe-carousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner room-height">
+                            <div class="item active">
+                                <img src="img/galleries/Deluxe-Twin-City-View.jpg" alt="...">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="img/galleries/Buffet-Breakfast.jpg" alt="...">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="img/galleries/Reunification-Palace.jpg" alt="...">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+                        <a class="carousel-control left" href="#deluxe-carousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="carousel-control right" href="#deluxe-carousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-md-pull-8 text-justify">
+                    Safe</br>
+                    Air conditioning</br>
+                    Desk, Sitting area,</br>
+                    Fan, Tile/Marble & Wooden floor</br>
+                    Hairdryer</br>
+                    Free toiletries, Toilet, Bathroom, Slippers, Bathtub or shower</br>
+                    TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Electric kettle</br>
+                    Wake-up service</br>
+                    Free WiFi is available in all rooms.</br>
+                    Room Size: 20 m²</br>
+                    Bed Size(s): 2 twin or 1 queen</br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="suite-room" class="bg-darkest">
+        <div class="container">
+            <div class="row clear-bottom-30">
+                <div class="col-lg-12 text-center header-section-border-container">
+                    <span class="header-section-border">SUITE ROOM</span>
+                </div>
+            </div>
+            <div class="row wow zoomIn" data-wow-duration="1s" data-wow-delay="0s">
+                <div class="col-sm-12 col-md-8">
+                    <div id="suite-carousel" class="carousel slide" data-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#suite-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#suite-carousel" data-slide-to="1"></li>
+                            <li data-target="#suite-carousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner room-height">
+                            <div class="item active">
+                                <img src="img/galleries/Deluxe-Twin-City-View.jpg" alt="...">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="img/galleries/Buffet-Breakfast.jpg" alt="...">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="img/galleries/Reunification-Palace.jpg" alt="...">
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+                        <a class="carousel-control left" href="#suite-carousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="carousel-control right" href="#suite-carousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 text-justify">
+                    Safe</br>
+                    Air conditioning</br>
+                    Desk, Sitting area,</br>
+                    Fan, Tile/Marble & Wooden floor</br>
+                    Hairdryer</br>
+                    Free toiletries, Toilet, Bathroom, Slippers, Bathtub or shower</br>
+                    TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Electric kettle</br>
+                    Wake-up service</br>
+                    Free WiFi is available in all rooms.</br>
+                    Room Size: 20 m²</br>
+                    Bed Size(s): 2 twin or 1 queen</br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="service" class="bg-midlight-gray">
+        <div class="container">
+            <div class="row clear-bottom-30">
+                <div class="col-lg-12 text-center header-section-border-container">
+                    <span class="header-section-border">Services</span>
+                </div>
+            </div>
+            <div class="row wow bounce" data-wow-duration="1s" data-wow-delay="0s">
+                <div class="col-sm-4 s-general">
+                    <div class="service-item">
+                        <i class="fa fa-suitcase fa-5x"></i>
+                        <h4>GENERAL</h4>
+                        <p>
+                            Safe, Non-smoking Rooms, Elevator, Air Conditioning, Tile/Marble & Wooden floor, Fan
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 s-living">
+                    <div class="service-item">
+                        <i class="fa fa-compass fa-5x"></i>
+                        <h4>LIVING AREA</h4>
+                        <p>
+                            Sitting area, Desk
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 s-food">
+                    <div class="service-item">
+                        <i class="fa fa-cutlery fa-5x"></i>
+                        <h4>FOOD & DRINK</h4>
+                        <p>
+                            Buffet-Style Restaurant, Minibar in Room, Buffet-Style Restaurant, Minibar in Room
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 s-media">
+                    <div class="service-item ">
+                        <i class="fa fa-desktop fa-5x"></i>
+                        <h4>MEDIA & TECHNOLOGY</h4>
+                        <p>
+                            Cable channels, Satellite channels, Telephone, TV
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 s-internet">
+                    <div class="service-item">
+                        <i class="fa fa-cloud-download fa-5x"></i>
+                        <h4>INTERNET</h4>
+                        <p>
+                            Free! WiFi is available in the hotel rooms and is free of charge.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 s-card">
+                    <div class="service-item">
+                        <i class="fa fa-credit-card fa-5x"></i>
+                        <h4>ACCEPTED CARDS</h4>
+                        <p>
+                            VISA, ACB, LUB BANK+, HBBANK, GLOBALBANK
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center s-crop">
+                    <p class="large">
+                        Room Service, Car Rental, Shuttle Service (surcharge), Airport Shuttle (surcharge), 24-Hour Front Desk, Express Check-in/Check-out, Currency Exchange, Tour Desk, Ticket Service, Baggage Storage, ATM on site, Concierge Service, Laundry, Dry Cleaning, Ironing Service, Meeting/Banquet Facilities, Business Center, Fax/Photocopying, Souvenir/Gift Shop, Wake-up service
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="review" class="bg-darkest">
+        <div class="container">
+            <div class="row clear-bottom-30">
+                <div class="col-lg-12 text-center header-section-border-container">
+                    <span class="header-section-border">Reviews</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>@Wong K</h4>
+                                    <h4 class="subheading">(Malaysia)</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        "Enjoy our stay at Lafelix near all travel agencies convenient for daily trip arrangement.
+                                        </br> Hotel clean, excellent location walking distance to beer street.
+                                        </br> Staff services excellent. Food abundant within walking distance. Strongly recommend to stay."
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>@Chia C</h4>
+                                    <h4 class="subheading">(Taiwan)</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        "The place for breakfast is so good, and it’s so convenient to get restaurant and shopping mall around there."
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>@Pavel</h4>
+                                    <h4 class="subheading">(Czech Republic)</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">
+                                        “Location of hotel is really great. It is situated in backpackers area… walking distance to the center. Many options where to go eat or drink. We had nice view from the room.”
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted wow fadeInRight" data-wow-duration="1s" data-wow-delay="1.25s">
+                            <div class="timeline-image wow tada" data-wow-duration="2s" data-wow-delay="1.5s">
+                                <h4>Be Part
+                                    <br>Of Our
+                                    <br>Story!</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="menus" class="bg-midlight-gray"  >
+        <div class="container">
+            <div class="row clear-bottom-30">
+                <div class="col-lg-12 text-center header-section-border-container">
+                    <span class="header-section-border">Menus</span>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </section>
+    <section id="offer-more"  class="bg-darkest">
+        <div class="container">
+            <div class="row clear-bottom-30">
+                <div class="col-lg-12 text-center header-section-border-container">
+                    <span class="header-section-border">OFFER MORE</span>
+                </div>
+            </div>
+            <div class="row wow zoomIn"  data-wow-duration="1s" data-wow-delay="0s">
+                <div class="col-md-4">
+                    <div class="offer-item" id="pickup">
+                        <i class="fa fa-car fa-5x"></i>
+                        <h4>Pickup & See-off</h4>
+                        <p class="text-muted">
+                            Comfortable</br>
+                            Always on time</br>
+                            Safe and reliable
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="offer-item" id="transportation">
+                        <i class="fa fa-plane fa-5x"></i>
+                        <h4>Transportation Tickets</h4>
+                        <p class="text-muted" >
+                            Good price</br>
+                            Fast delivering</br>
+                            Book first, pay layer
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="offer-item" id="exchange">
+                        <i class="fa fa-usd fa-5x"></i>
+                        <h4>Currency Exchange</h4>
+                        <p class="text-muted" >
+                            Safe and secured</br>
+                            Good exchange rate</br>
+                            Fast and convenient
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="offer-item" id="tours">
+                        <i class="fa fa-leaf fa-5x"></i>
+                        <h4>Tours & Workshops</h4>
+                        <p class="text-muted" >
+                            Pickup at the hotel</br>
+                            Authentic experience</br>
+                            Good value for money</br>
+                            Best packages, various options
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="offer-item" id="laundry">
+                        <i class="fa fa-bullseye fa-5x"></i>
+                        <h4>Laundry / Dry Cleaning</h4>
+                        <p class="text-muted" >
+                            Good price</br>
+                            Eco-friendly</br>
+                            Delivering on time</br>
+                            Carefully and gently washed
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="offer-item" id="freebies">
+                        <i class="fa fa-gift fa-5x"></i>
+                        <h4>Extra Freebies</h4>
+                        <p class="text-muted" >
+                            Free city map</br>
+                            Free luggage storage</br>
+                            Free and fast Wi-fi</br>
+                            Complementary water
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="promotion" class="bg-midlight-gray">
+        <div class="container">
+            <div class="row clear-bottom-30">
+                <div class="col-lg-12 text-center header-section-border-container">
+                    <span class="header-section-border">Promotion</span>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </section>
+
+    <section id="galleries" class="bg-darkest">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center header-section-border-container">
+                    <span class="header-section-border">Galleries</span>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-midlight-gray">
+        <div class="container">
+            <div class="row clear-bottom-30">
+                <div class="col-lg-12 text-center header-section-border-container">
+                    <span class="header-section-border">Contact</span>
+                </div>
+            </div>
+            <div class="row text-center wow tada"  data-wow-duration="2s" data-wow-delay="0.5s">
+                <div class="col-md-12">
+                    <span class="text-color-red text-color">Address:</span><span> 287 – 289 Pham Ngu Lao Street, Pham Ngu Lao Ward, District 1, Ho Chi Minh City, Vietnam</span></br>
+                    <span class="text-color-red text-color">Telephone:</span><span> +84 8 3838 6972</span></br>
+                    <span class="text-color-red text-color">Fax:</span><span> + 84 8 3837 7409</span></br>
+                    <span class="text-color-red text-color">Hotline:</span><span> +84 903773372 (Mr. Khanh – Sales Director)</span></br>
+                    <span class="text-color-red text-color">Email:</span><span> sales@lafelixhotel.com</span></br>
+                    <span class="text-color-red text-color">Website:</span><span> lafelixhotel.com</span></br>
+                </div>
+            </div>
+            <div class="clear-contain"></div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 wow fadeInDown"  data-wow-duration="2s" data-wow-delay="1s">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-3 control-label text-color-red">Your name (*)</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" id="inputName" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-sm-3 control-label text-color-red">Your email (*)</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputSubject" class="col-sm-3 control-label text-color-red">Subject</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" id="inputSubject" placeholder="Subject">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputContent" class="col-sm-3 control-label text-color-red">Content</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" rows="5" id="inputContent"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-10 col-sm-2">
+                                <button type="submit" class="btn  btn-lafelix">
+                                    <span class="fa fa-paper-plane" aria-hidden="true"></span> Send
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 col-sm-12 wow fadeInUp"  data-wow-duration="2s" data-wow-delay="1.5s">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.565906867404!2d106.69121500000001!3d10.7679!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3d8081d9c9%3A0xa365baed94673acd!2sLa+Felix+Hotel!5e0!3m2!1sen!2s!4v1428739336076" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <span>LA FELIX HOTEL </span></br>
+                    <span>287-289 Pham Ngu Lao Street, District 1, Ho Chi Minh City, Viet Nam</span>
+                    </br>
+                    <span>Tel: +84 8 3838 6972 </span>
+                    </br>
+                    <span>Email: info@lafelixhotel.com</span>
+                </div>
+                <div class="col-sm-12">
+                    <span class="copyright">Copyright &copy; DUONGNGUYEN 2015</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+    <div class="modal  fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-center" id="myModalLabel">RESERVE FORM</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="res-inputName" class="col-sm-12">Your name</label>
+                                        <div class="col-sm-12">
+                                            <input type="email" class="form-control" id="res-inputName" placeholder="Your name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="res-inputEmail" class="col-sm-12">Your email (*)</label>
+                                        <div class="col-sm-12">
+                                            <input type="email" class="form-control" id="res-inputEmail" placeholder="Your email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="res-inputPhone" class="col-sm-12">Your phone (*)</label>
+                                        <div class="col-sm-12">
+                                            <input type="password" class="form-control" id="res-inputPhone" placeholder="Your phone">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="res-inputRequirement" class="col-sm-12">Requirement</label>
+                                        <div class="col-sm-12">
+                                            <textarea class="form-control" rows="5" id="res-inputRequirement"></textarea>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-8 col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="text-success">You will have 10 great days  in LA FELIX Hotel</p>
+                                        <form id="res-reverseForm" method="post" class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-xs-3">FROM: </label>
+                                                <div class="col-xs-8 date">
+                                                    <div class="input-group input-append date" id="res-datePickerFrom">
+                                                        <input type="text" class="form-control" name="date" />
+                                                        <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-xs-3">TO:</label>
+                                                <div class="col-xs-8 date">
+                                                    <div class="input-group input-append date" id="res-datePickerTo">
+                                                        <input type="text" class="form-control" name="date" />
+                                                        <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-xs-3">RES:</label>
+                                                <div class="col-xs-8 date">
+                                                    <select class="form-control" id="res-reserve">
+                                                        <option>Stand</option>
+                                                        <option>VIP</option>
+                                                        <option>Olax</option>
+                                                        <option>Minya</option>
+                                                        <option>Kolla</option>
+                                                        <option>Kolla</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <p>Room description:</p>
+                                        <p>
+                                            <spand>Safe</spand></br>
+                                            <spand>Air conditioning</spand></br>
+                                            <spand>Desk, Sitting area,</spand></br>
+                                            <spand>Fan, Tile/Marble & Wooden floor</spand></br>
+                                            <spand>Hairdryer</spand></br>
+                                            <spand>Free toiletries, Toilet, Bathroom, Slippers, Bathtub or shower</spand></br>
+                                            <spand>TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Electric kettle</spand></br>
+                                            <spand>Wake-up service</spand></br>
+                                            <spand>Free WiFi is available in all rooms.</spand></br>
+                                            <spand>Room Size: 20 m²</spand></br>
+                                            <spand>Bed Size(s): 2 twin or 1 queen</spand></br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn  btn-lafelix">
+                        <span class="fa fa-paper-plane" aria-hidden="true"></span> Bock this room
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- animation -->
+    <script src="js/animationHandle.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <!--wow js-->
+    <script src="js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Script to Activate the Carousel -->
+    <script>
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        })
+    </script>
+
+    <!--datepicker-->
+    <script src="libs/datepicker/bootstrap-datepicker.min.js"></script>
+
+    <script type="text/javascript">
+        $().ready(function(){
+            $('[rel="tooltip"]').tooltip();
+        });
+    </script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
+
+    <!-- custom datepicker -->
+    <script src="js/datepickerCustom.js"></script>
+
+    <!--Angular JS -->
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-route.js"></script>
+    <script src="js/angular/app.js"></script>
+    <script src="js/angular/controllers.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

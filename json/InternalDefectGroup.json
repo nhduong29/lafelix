@@ -1,0 +1,51 @@
+[
+    {
+        "id" : "submited",
+        "value": 32,
+        "color":"#CFF09E",
+        "highlight": "#C3DADF",
+        "label": "Submited"
+    },
+    {
+        "id" : "inProgress",
+        "value": 14,
+        "color":"#A8DBA8",
+        "highlight": "#C3DADF",
+        "label": "In Progress"
+    },
+    {
+        "id" : "sentReview",
+        "value": 15,
+        "color":"#3B8686",
+        "highlight": "#C3DADF",
+        "label": "Sent Review"
+    },
+    {
+        "id" : "codeCompleted",
+        "value": 14,
+        "color":"#0B486B",
+        "highlight": "#C3DADF",
+        "label": "Code Completed"
+    },
+    {
+        "id" : "testing",
+        "value": 33,
+        "color":"#00D8C3",
+        "highlight": "#C3DADF",
+        "label": "Testing"
+    },
+    {
+        "id" : "close",
+        "value": 56,
+        "color":"#00ACE0",
+        "highlight": "#C3DADF",
+        "label": "Close"
+    },
+    {
+        "id" : "failed",
+        "value": 34,
+        "color":"#DC6068",
+        "highlight": "#C3DADF",
+        "label": "Failed"
+    }
+]

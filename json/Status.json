@@ -1,0 +1,23 @@
+[
+    {
+        "id" : 1,
+        "title" : "Update FDD",
+        "severity" : "info",
+        "content" : "Please update FDD",
+        "author" : "Thanh Pham"
+    },
+    {
+        "id" : 2,
+        "title" : "XXXXXXXXXXXX",
+        "severity" : "danger",
+        "content" : "bla bla bla blabla bla bla blabla bla bla blabla bla bla blabla bla bla blabla bla bla blabla bla bla bla",
+        "author" : "Oanh Duong"
+    },
+    {
+        "id" : 3,
+        "title" : "We should finish review 3 below defects today",
+        "severity" : "info",
+        "content" : "Subnet Profile UI is cropped when hierarchy is expanded if window is too small D-02707 Admin prompted for org after password change when only one exists D-02764 Pushing DNS server with the type of Update will not increase the serial number D-02643.I need experts' help to review 3 above defects",
+        "author" : "Thanh Pham"
+    }
+]
