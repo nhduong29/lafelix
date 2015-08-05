@@ -68,7 +68,7 @@ h6 {
 
 
 .bg-darkest {
-    background-color: #000000;
+    background-color: #031634;
     color: #7F7F70;
 }
 
@@ -183,7 +183,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default {
-    background: #000000;
+    background: #031634;
 
 }
 
@@ -273,7 +273,7 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default.navbar-shrink {
         border: 0;
         padding: 5px 0;
-        background: #000000;
+        background: #031634;
         border-bottom: 1px solid #ffffff ;
 
     }
@@ -436,7 +436,7 @@ section h3.section-subheading {
 }
 .badge-top1{
     background: transparent;
-    text-shadow: 0 1px 2px #000;
+    text-shadow: 0 1px 2px #031634;
 }
 .panel-body-leader{
     padding: 0px;
@@ -762,7 +762,7 @@ aside.clients img {
 footer {
     padding: 10px 0;
     text-align: center;
-    background: #000000;
+    background: #031634;
     font-family: 'Josefin Slab', serif;
     line-height: 22px;
     font-size: 15px;
@@ -964,7 +964,7 @@ big-number-span
 .carousel-caption-full{
     text-align: right !important;
     padding-right: 0px !important;
-    color: #000000;
+    color: #031634;
     font-size: 18px !important;
 }
 
@@ -1160,7 +1160,7 @@ big-number-span
 }
 .number-item >.big-number-span:hover{
     color: #FF6800;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 1px #031634;
 }
 .number-item>.text-color:hover{
     color: #C70808;
